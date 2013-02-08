@@ -1,6 +1,8 @@
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -58,8 +60,12 @@ public class Buena extends JFrame {
 		JButton btnEnviar = new JButton("Enviar");
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				List<Integer> ls = new ArrayList<Integer>();
 				ManFile mfile = new ManFile();
+				GamePlay gPlay = new GamePlay();
 				
+				ls = mfile.LoadFile(tfNumero.getText(), true);
+				gPlay.setVisible(true);
 				Buena.this.dispose();
 			}
 		});

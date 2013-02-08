@@ -26,7 +26,7 @@ public class ManFile {
 			return false;
 		}
 	}
-	public List LoadFile(String path){
+	public List<Integer> LoadFile(String path, boolean bool){
 		File file = new File(path);
 		List<Integer> sNumeros = new ArrayList<Integer>();
 		
@@ -38,11 +38,11 @@ public class ManFile {
 				int l = 0;
 				
 				while((line = reader.readLine()) != null){
-					if(esPar(l))	
+					//if(esPar(l))	
 						sNumeros.add(Integer.parseInt(line));
 					
 
-					System.out.println(esPar(l));
+					System.out.println(line);
 					
 					++l;
 				}

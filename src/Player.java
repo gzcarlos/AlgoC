@@ -15,10 +15,8 @@ public class Player {
 	}
 	
 	private void InitializePlayer() {
-		// TODO Auto-generated method stub
-		for(int i = 0; i < plays.size(); ++i){
-			
-		}
+		GameRules gameRule = new GameRules();
+		playerFrame = gameRule.applyBowlingRules(plays);
 	}
 
 	public void setPlays(List plays){
@@ -30,6 +28,8 @@ public class Player {
 		return plays.get(position);
 	}
 	
-	
+	public int  getPlayerNumber(){
+		return playerNo;
+	}
 
 }
