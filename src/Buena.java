@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import tools.ManFile;
+import java.awt.Toolkit;
 
 
 public class Buena extends JFrame {
@@ -40,6 +41,7 @@ public class Buena extends JFrame {
 	 * Create the frame.
 	 */
 	public Buena() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Public\\Pictures\\icono.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 236, 177);
 		contentPane = new JPanel();

@@ -14,14 +14,13 @@ public class GameRules {
 			if(i == 9)
 				expectedFrame[i].setFinalFrame(true);
 			
-			if(list.get(i) == 10){ //Si el primer lanzamiento es un Strike
-				expectedFrame[i].setFirstPlay(10);
-				expectedFrame[i].setSecondPlay(0);
+			for (int j = 0; j < 3; ++j){// el maximo de lanzamientos en un frame es 3, para el FinalFrame
 				
-				if(i == 9){//si se encuentra en el ultimo frame 
-					expectedFrame[i].setTotalPlays(expectedFrame[i].getFirstPlay() + expectedFrame[i - 1].getTotalPlay());
-			
+				//Man At Work
+				if(list.get(j + 1) != null){// si el primer lanzamiento del fame es un Strike
+						
 				}
+				//Where Works End
 			}
 		}
 		
